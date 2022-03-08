@@ -2,7 +2,7 @@ import { Link, Outlet } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
+    <div className='border'>
       <h1>Starter App</h1>
       <nav
         style={{
@@ -10,6 +10,8 @@ function App() {
         }}
         >
           <Link to='/home'>Home</Link> - {' '}
+          <Link to='/shoes'>Shoes</Link> - {' '}
+          <Link to='/shoes/new'>New Shoes</Link> - {' '}
           <Link to='/about'>About</Link>
         </nav>
         <p>Outlet component here</p>

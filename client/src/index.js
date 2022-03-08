@@ -7,6 +7,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "./pages/About";
 import DataProvider from "./providers/DataProvider";
 import Home from "./pages/Home";
+import Shoes from "./pages/Shoes";
+import ShoeForm from "./pages/ShoeForm";
+import ShoeShow from "./pages/ShoeShow";
+import "./App.css"
 
 
 const NotFound = ()=>{
@@ -20,6 +24,10 @@ ReactDOM.render(
         <Route path="/" element={<App />}>
           <Route path="/about" element={<About />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/shoes" element={<Shoes />} />
+          <Route path="/shoes/new" element={<ShoeForm />} />
+          <Route path="/shoes/:id" element={<ShoeShow />} />
+          <Route path="/shoes/:id/edit" element={<ShoeForm />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
